@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double num, square, cube;
+    printf("Enter a decimal number: ");
+    scanf("%lf", &num);
+
+    square = pow(num, 2);
+    cube = pow(num, 3);
+
+    printf("Square of %lf is %lf\n", num, square);
+    printf("Cube of %lf is %lf\n", num, cube);
+
+    return 0;
+}
