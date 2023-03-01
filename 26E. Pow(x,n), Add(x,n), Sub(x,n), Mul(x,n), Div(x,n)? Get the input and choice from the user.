@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <math.h>
+
+int Add(int x, int n) {
+  return x + n;
+}
+
+int Sub(int x, int n) {
+  return x - n;
+}
+
+int Mul(int x, int n) {
+  return x * n;
+}
+
+int Div(int x, int n) {
+  return x / n;
+}
+
+int Pow(int x, int n) {
+  return pow(x, n);
+}
+
+int main() {
+  int x, n, choice;
+  printf("Enter two operands: ");
+  scanf("%d %d", &x, &n);
+  printf("Enter your choice:\n");
+  printf("1. Addition\n");
+  printf("2. Subtraction\n");
+  printf("3. Multiplication\n");
+  printf("4. Division\n");
+  printf("5. Power\n");
+  scanf("%d", &choice);
+
+  switch(choice) {
+    case 1:
+      printf("Result: %d\n", Add(x, n));
+      break;
+    case 2:
+      printf("Result: %d\n", Sub(x, n));
+      break;
+    case 3:
+      printf("Result: %d\n", Mul(x, n));
+      break;
+    case 4:
+      printf("Result: %d\n", Div(x, n));
+      break;
+    case 5:
+      printf("Result: %d\n", Pow(x, n));
+      break;
+    default:
+      printf("Invalid choice\n");
+  }
+
+  return 0;
+}
