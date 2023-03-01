@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+typedef struct {
+    float real;
+    float imag;
+} complex;
+
+complex divide(complex a, complex b) {
+    complex result;
+    float denominator = b.real * b.real + b.imag * b.imag;
+    result.real = (a.real * b.real + a.imag * b.imag) / denominator;
+    result.imag = (a.imag * b.real - a.real * b.imag) / denominator;
+    return result;
+}
+
+int main() {
+    complex a, b, result;
+    printf("Enter the real and imaginary parts of the first complex number:\n");
+    scanf("%f %f", &a.real, &a.imag);
+    printf("Enter the real and imaginary parts of the second complex number:\n");
+    scanf("%f %f", &b.real, &b.imag);
+    result = divide(a, b);
+    printf("Quotient = %.2f + %.2fi\n", result.real, result.imag);
+    return 0;
+}
