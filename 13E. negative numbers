@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int array[100];
+    int array_size, count = 0;
+
+    printf("Enter the size of the array: ");
+    scanf("%d", &array_size);
+
+    printf("Enter the elements of the array: ");
+    for(int i = 0; i < array_size; i++) {
+        scanf("%d", &array[i]);
+    }
+
+    for(int i = 0; i < array_size; i++) {
+        if(array[i] < 0) {
+            count++;
+        }
+    }
+
+    printf("Number of negative numbers in the array: %d\n", count);
+    
+    return 0;
+}
