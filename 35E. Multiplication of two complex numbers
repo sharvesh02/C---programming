@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+typedef struct {
+    float real;
+    float imag;
+} complex;
+
+complex multiply(complex a, complex b) {
+    complex result;
+    result.real = (a.real * b.real) - (a.imag * b.imag);
+    result.imag = (a.real * b.imag) + (a.imag * b.real);
+    return result;
+}
+
+int main() {
+    complex a, b, result;
+    printf("Enter the real and imaginary parts of the first complex number:\n");
+    scanf("%f %f", &a.real, &a.imag);
+    printf("Enter the real and imaginary parts of the second complex number:\n");
+    scanf("%f %f", &b.real, &b.imag);
+    result = multiply(a, b);
+    printf("Product = %.2f + %.2fi\n", result.real, result.imag);
+    return 0;
+}
